@@ -1,0 +1,487 @@
+/* Reset e estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ffc107;
+  margin: 15px auto;
+}
+
+/* Header */
+header {
+  background-color: #1a237e;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  color: #ffc107;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #303f9f;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+
+
+.hero {
+background-image: 
+linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+url("assets/515791da-eletricista-001-800x445.jpeg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Services Overview */
+.services-overview {
+  background-color: #f9f9f9;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* About Section */
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.benefits li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.benefits i {
+  color: #4caf50;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.about-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f9f9f9;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.contact-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item i {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.contact-item h3 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a237e;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffc107;
+}
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/placeholder.svg?height=400&width=1200");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Services Detailed */
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.service-description h2 {
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.service-description h2:after {
+  margin: 15px 0;
+}
+
+.service-description ul {
+  margin-top: 20px;
+}
+
+.service-description li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service-description li:before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+}
+
+.service-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.cta {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+}
+
+.cta h2:after {
+  background-color: #ffc107;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta .btn {
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about .container,
+  .service-item {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .service-item:nth-child(even) .service-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #1a237e;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  .social-links {
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Estilo do botão fixo (verde do WhatsApp) */
+.whatsapp-button.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  display: none; /* Inicialmente oculto */
+}
+
+/* Estilo do botão no hero (semelhante aos outros botões da página) */
+.whatsapp-button.hero-style {
+  background-color: #ffc107;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-whatsapp {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.whatsapp-button i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.whatsapp-button.fixed:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button.hero-style:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    padding: 10px 16px;
+  }
+
+  .whatsapp-button i {
+    font-size: 1.3rem;
+  }
+
+  .hero-whatsapp {
+    margin-top: 40px;
+  }
+}
