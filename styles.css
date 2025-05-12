@@ -1,3 +1,27 @@
+/* Variáveis de cores */
+:root {
+  /* Cores principais */
+  --primary-color: #1a237e; /* Azul escuro - cor principal */
+  --primary-light: #303f9f; /* Azul mais claro para hover */
+  --secondary-color: #ffc107; /* Amarelo - cor de destaque */
+  --secondary-dark: #e0a800; /* Amarelo escuro para hover */
+
+  /* Cores de texto e fundo */
+  --text-color: #333; /* Cor de texto padrão */
+  --text-light: white; /* Cor de texto clara */
+  --bg-light: white; /* Fundo claro */
+  --bg-gray: #f9f9f9; /* Fundo cinza claro */
+
+  /* Cores de utilidade */
+  --success-color: #4caf50; /* Verde para ícones de sucesso */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Cor para sombras */
+  --shadow-dark: rgba(0, 0, 0, 0.2); /* Cor para sombras mais escuras */
+
+  /* Cores do WhatsApp */
+  --whatsapp-color: #25d366; /* Verde do WhatsApp */
+  --whatsapp-dark: #128c7e; /* Verde escuro do WhatsApp para hover */
+}
+
 /* Reset e estilos gerais */
 * {
   margin: 0;
@@ -8,7 +32,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-color);
 }
 
 .container {
@@ -34,8 +58,8 @@ ul {
 
 .btn {
   display: inline-block;
-  background-color: #ffc107;
-  color: #333;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   padding: 12px 24px;
   border-radius: 4px;
   font-weight: bold;
@@ -44,9 +68,9 @@ ul {
 }
 
 .btn:hover {
-  background-color: #e0a800;
+  background-color: var(--secondary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 section {
@@ -65,19 +89,19 @@ h2:after {
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #ffc107;
+  background-color: var(--secondary-color);
   margin: 15px auto;
 }
 
 /* Header */
 header {
-  background-color: #1a237e;
-  color: white;
-  padding: 15px 0;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 header .container {
@@ -86,15 +110,8 @@ header .container {
   align-items: center;
 }
 
-.logo h1 {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-}
-
-.logo i {
-  color: #ffc107;
-  margin-right: 10px;
+.logo img {
+  width: 0px;
 }
 
 nav ul {
@@ -113,7 +130,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #303f9f;
+  background-color: var(--primary-light);
 }
 
 .menu-toggle {
@@ -123,18 +140,17 @@ nav ul li a.active {
 }
 
 /* Hero Section */
-
-
 .hero {
-background-image: 
-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-url("assets/515791da-eletricista-001-800x445.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("assets/515791da-eletricista-001-800x445.jpeg");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
-  color: white;
+  color: var(--text-light);
   text-align: center;
   padding: 120px 0;
+  position: relative;
+  margin-top: 0;
 }
 
 .hero-content {
@@ -155,7 +171,7 @@ url("assets/515791da-eletricista-001-800x445.jpeg");
 
 /* Services Overview */
 .services-overview {
-  background-color: #f9f9f9;
+  background-color: var(--bg-gray);
 }
 
 .services-grid {
@@ -166,22 +182,22 @@ url("assets/515791da-eletricista-001-800x445.jpeg");
 }
 
 .service-card {
-  background-color: white;
+  background-color: var(--bg-light);
   padding: 30px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px var(--shadow-color);
 }
 
 .service-card i {
   font-size: 3rem;
-  color: #1a237e;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -210,7 +226,7 @@ url("assets/515791da-eletricista-001-800x445.jpeg");
 }
 
 .benefits i {
-  color: #4caf50;
+  color: var(--success-color);
   margin-right: 10px;
   font-size: 1.2rem;
 }
@@ -218,12 +234,12 @@ url("assets/515791da-eletricista-001-800x445.jpeg");
 .about-image {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px var(--shadow-color);
 }
 
 /* Contact Section */
 .contact {
-  background-color: #f9f9f9;
+  background-color: var(--bg-gray);
 }
 
 .contact-info {
@@ -233,16 +249,16 @@ url("assets/515791da-eletricista-001-800x445.jpeg");
 }
 
 .contact-item {
-  background-color: white;
+  background-color: var(--bg-light);
   padding: 30px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .contact-item i {
   font-size: 2.5rem;
-  color: #1a237e;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -252,8 +268,8 @@ url("assets/515791da-eletricista-001-800x445.jpeg");
 
 /* Footer */
 footer {
-  background-color: #1a237e;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   padding: 30px 0;
   text-align: center;
 }
@@ -272,7 +288,7 @@ footer .container {
 }
 
 .social-links a:hover {
-  color: #ffc107;
+  color: var(--secondary-color);
 }
 
 /* Page Header */
@@ -280,9 +296,10 @@ footer .container {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/placeholder.svg?height=400&width=1200");
   background-size: cover;
   background-position: center;
-  color: white;
+  color: var(--text-light);
   text-align: center;
   padding: 80px 0;
+  position: relative;
 }
 
 .page-header h1 {
@@ -324,19 +341,19 @@ footer .container {
   font-weight: 900;
   position: absolute;
   left: 0;
-  color: #4caf50;
+  color: var(--success-color);
 }
 
 .service-image {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px var(--shadow-color);
 }
 
 /* CTA Section */
 .cta {
-  background-color: #1a237e;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-light);
   text-align: center;
   padding: 80px 0;
 }
@@ -346,7 +363,7 @@ footer .container {
 }
 
 .cta h2:after {
-  background-color: #ffc107;
+  background-color: var(--secondary-color);
 }
 
 .cta p {
@@ -384,9 +401,9 @@ footer .container {
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: #1a237e;
+    background-color: var(--primary-color);
     padding: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px var(--shadow-color);
   }
 
   nav.active {
@@ -426,33 +443,28 @@ footer .container {
   font-weight: bold;
   border-radius: 50px;
   padding: 12px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  z-index: 999;
   transition: all 0.3s ease;
+  background-color: var(--whatsapp-color);
+  color: var(--text-light);
 }
 
-/* Estilo do botão fixo (verde do WhatsApp) */
+/* Estilo do botão fixo */
 .whatsapp-button.fixed {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  color: white;
-  display: none; /* Inicialmente oculto */
-}
-
-/* Estilo do botão no hero (semelhante aos outros botões da página) */
-.whatsapp-button.hero-style {
-  background-color: #ffc107;
-  color: #333;
-  font-weight: bold;
-  text-transform: uppercase;
+  display: none;
+  z-index: 999;
 }
 
 .hero-whatsapp {
   margin-top: 30px;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 5;
 }
 
 .whatsapp-button i {
@@ -460,16 +472,10 @@ footer .container {
   margin-right: 8px;
 }
 
-.whatsapp-button.fixed:hover {
-  background-color: #128c7e;
+.whatsapp-button:hover {
+  background-color: var(--whatsapp-dark);
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-button.hero-style:hover {
-  background-color: #e0a800;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px var(--shadow-dark);
 }
 
 @media (max-width: 768px) {
