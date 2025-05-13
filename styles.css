@@ -1,21 +1,36 @@
 /* Variáveis de cores */
 :root {
-  /* Cores principais */
-  --primary-color: #1a237e; /* Azul escuro - cor principal */
-  --primary-light: #303f9f; /* Azul mais claro para hover */
-  --secondary-color: #ffc107; /* Amarelo - cor de destaque */
-  --secondary-dark: #e0a800; /* Amarelo escuro para hover */
 
-  /* Cores de texto e fundo */
-  --text-color: #333; /* Cor de texto padrão */
-  --text-light: white; /* Cor de texto clara */
-  --bg-light: white; /* Fundo claro */
-  --bg-gray: #f9f9f9; /* Fundo cinza claro */
+  /* aq */
+              /* --primary-color: #3b53a3; 
+              --primary-light: #303f9f; 
+              --secondary-color: #ffc107; 
+              --secondary-dark: #e0a800; 
 
-  /* Cores de utilidade */
-  --success-color: #4caf50; /* Verde para ícones de sucesso */
-  --shadow-color: rgba(0, 0, 0, 0.1); /* Cor para sombras */
-  --shadow-dark: rgba(0, 0, 0, 0.2); /* Cor para sombras mais escuras */
+  
+              --text-color: #333; 
+              --text-light: white; 
+              --bg-light: white; 
+              --bg-gray: #f9f9f9;  */
+
+  /* fim */
+/* Cores principais */
+--primary-color: #1C1C1C;      /* Preto - cor principal escura */
+--primary-light: #333333;      /* Cinza escuro para hover */
+--secondary-color: #f5a623;    /* Laranja - cor de destaque */
+--secondary-dark: #d48806;     /* Laranja escuro para hover */
+
+/* Cores de texto e fundo */
+--text-color: #1C1C1C;         /* Cor de texto escura */
+--text-light: #FFFFFF;         /* Cor de texto clara */
+--bg-light: #FFFFFF;           /* Fundo claro */
+--bg-gray: #F2F2F2;            /* Fundo cinza claro */
+
+/* Cores de utilidade */
+--success-color: #4CAF50;            /* Verde para sucesso (mantido) */
+--shadow-color: rgba(0, 0, 0, 0.05);  /* Sombra leve */
+--shadow-dark: rgba(0, 0, 0, 0.15);   /* Sombra mais escura */
+
 
   /* Cores do WhatsApp */
   --whatsapp-color: #25d366; /* Verde do WhatsApp */
@@ -144,7 +159,7 @@ nav ul li a.active {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("assets/515791da-eletricista-001-800x445.jpeg");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: left center;
   background-size: cover;
   color: var(--text-light);
   text-align: center;
@@ -170,6 +185,7 @@ nav ul li a.active {
 }
 
 /* Services Overview */
+
 .services-overview {
   background-color: var(--bg-gray);
 }
@@ -293,7 +309,8 @@ footer .container {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/placeholder.svg?height=400&width=1200");
+  background-image: linear-gradient(rgba(65, 43, 10, 0.7), rgba(0, 0, 0, 0.7)),
+  url("assets/serviços.jpeg");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
@@ -394,48 +411,6 @@ footer .container {
   }
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: var(--primary-color);
-    padding: 20px;
-    box-shadow: 0 5px 10px var(--shadow-color);
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 0;
-    margin-bottom: 15px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  footer .container {
-    flex-direction: column;
-  }
-
-  .social-links {
-    margin-top: 20px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
 /* Botão do WhatsApp */
 .whatsapp-button {
   display: flex;
@@ -479,7 +454,58 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  .whatsapp-button {
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("assets/jeferson.png");
+    background-position: center top;
+  }
+
+  .page-header {
+    background-image: linear-gradient(rgba(66, 8, 8, 0.7), rgba(0, 0, 0, 0.9)),
+    url("assets/serviçoes-mobile.jpeg");
+    background-position: center;
+}
+  
+  footer .container {
+    flex-direction: column;
+  }
+
+  .social-links {
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+    .whatsapp-button {
     padding: 10px 16px;
   }
 
