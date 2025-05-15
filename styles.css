@@ -1,35 +1,17 @@
 /* Variáveis de cores */
 :root {
 
-  /* aq */
-              /* --primary-color: #3b53a3; 
-              --primary-light: #303f9f; 
-              --secondary-color: #ffc107; 
-              --secondary-dark: #e0a800; 
-
-  
-              --text-color: #333; 
-              --text-light: white; 
-              --bg-light: white; 
-              --bg-gray: #f9f9f9;  */
-
-  /* fim */
 /* Cores principais */
---primary-color: #1C1C1C;      /* Preto - cor principal escura */
---primary-light: #333333;      /* Cinza escuro para hover */
---secondary-color: #f5a623;    /* Laranja - cor de destaque */
+--primary-color: #0A1F44;      /* Azul escuro */
+--primary-light: #123B70;      /* Azul mais claro para hover */
+--secondary-color: #f5a623;    /* Laranja para destaque */
 --secondary-dark: #d48806;     /* Laranja escuro para hover */
 
 /* Cores de texto e fundo */
---text-color: #1C1C1C;         /* Cor de texto escura */
---text-light: #FFFFFF;         /* Cor de texto clara */
+--text-color: #0A1F44;         /* Azul escuro para textos */
+--text-light: #FFFFFF;         /* Branco */
 --bg-light: #FFFFFF;           /* Fundo claro */
---bg-gray: #F2F2F2;            /* Fundo cinza claro */
-
-/* Cores de utilidade */
---success-color: #4CAF50;            /* Verde para sucesso (mantido) */
---shadow-color: rgba(0, 0, 0, 0.05);  /* Sombra leve */
---shadow-dark: rgba(0, 0, 0, 0.15);   /* Sombra mais escura */
+--bg-gray: #E6F0FA;            /* Azul bem claro (fundo suave) */
 
 
   /* Cores do WhatsApp */
@@ -309,8 +291,8 @@ footer .container {
 
 /* Page Header */
 .page-header {
-  background-image: linear-gradient(rgba(65, 43, 10, 0.7), rgba(0, 0, 0, 0.7)),
-  url("assets/serviços.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("assets/515791da-eletricista-001-800x445.jpeg");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
@@ -483,13 +465,13 @@ footer .container {
   }
 
   .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url("assets/jeferson.png");
     background-position: center top;
   }
 
   .page-header {
-    background-image: linear-gradient(rgba(66, 8, 8, 0.7), rgba(0, 0, 0, 0.9)),
+    background-image: linear-gradient(rgba(65, 43, 10, 0.5), rgba(0, 0, 0, 0.5)),
     url("assets/serviçoes-mobile.jpeg");
     background-position: center;
 }
