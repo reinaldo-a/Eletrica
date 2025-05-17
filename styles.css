@@ -1,22 +1,20 @@
 /* Variáveis de cores */
 :root {
+  /* Cores principais */
+  --primary-color: #0A1F44;      /* Azul escuro */
+  --primary-light: #123B70;      /* Azul mais claro para hover */
+  --secondary-color: #f5a623;    /* Laranja para destaque */
+  --secondary-dark: #d48806;     /* Laranja escuro para hover */
 
-/* Cores principais */
---primary-color: #0A1F44;      /* Azul escuro */
---primary-light: #123B70;      /* Azul mais claro para hover */
---secondary-color: #f5a623;    /* Laranja para destaque */
---secondary-dark: #d48806;     /* Laranja escuro para hover */
-
-/* Cores de texto e fundo */
---text-color: #0A1F44;         /* Azul escuro para textos */
---text-light: #FFFFFF;         /* Branco */
---bg-light: #FFFFFF;           /* Fundo claro */
---bg-gray: #E6F0FA;            /* Azul bem claro (fundo suave) */
-
+  /* Cores de texto e fundo */
+  --text-color: #0A1F44;         /* Azul escuro para textos */
+  --text-light: #FFFFFF;         /* Branco */
+  --bg-light: #FFFFFF;           /* Fundo claro */
+  --bg-gray: #E6F0FA;            /* Azul bem claro (fundo suave) */
 
   /* Cores do WhatsApp */
-  --whatsapp-color: #25d366; /* Verde do WhatsApp */
-  --whatsapp-dark: #128c7e; /* Verde escuro do WhatsApp para hover */
+  --whatsapp-color: #25d366;     /* Verde do WhatsApp */
+  --whatsapp-dark: #128c7e;      /* Verde escuro do WhatsApp para hover */
 }
 
 /* Reset e estilos gerais */
@@ -34,9 +32,9 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
 img {
@@ -57,8 +55,8 @@ ul {
   display: inline-block;
   background-color: var(--secondary-color);
   color: var(--text-color);
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -66,17 +64,17 @@ ul {
 
 .btn:hover {
   background-color: var(--secondary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px var(--shadow-color);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
 }
 
 section {
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 h2 {
   font-size: 2.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   text-align: center;
   position: relative;
 }
@@ -84,21 +82,21 @@ h2 {
 h2:after {
   content: "";
   display: block;
-  width: 80px;
-  height: 4px;
+  width: 5rem;
+  height: 0.25rem;
   background-color: var(--secondary-color);
-  margin: 15px auto;
+  margin: 0.9375rem auto;
 }
 
 /* Header */
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 10px 0;
+  padding: 0.625rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px var(--shadow-color);
+  box-shadow: 0 0.125rem 0.625rem var(--shadow-color);
 }
 
 header .container {
@@ -108,7 +106,7 @@ header .container {
 }
 
 .logo img {
-  width: 180px;
+  width: 11.25rem;
 }
 
 nav ul {
@@ -116,12 +114,12 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
 nav ul li a {
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
   transition: all 0.3s ease;
 }
 
@@ -138,101 +136,100 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/515791da-eletricista-001-800x445.jpeg");
+  background-image: linear-gradient(rgba(54, 53, 20, 0.6), rgba(0, 0, 0, 0.7)),
+    url("assets/capa-inicio.jpeg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
   color: var(--text-light);
   text-align: center;
-  padding: 120px 0;
+  padding: 7.5rem 0;
   position: relative;
   margin-top: 0;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.25rem;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 /* Services Overview */
-
 .services-overview {
   background-color: var(--bg-gray);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.875rem;
+  margin-bottom: 2.5rem;
 }
 
 .service-card {
   background-color: var(--bg-light);
-  padding: 30px;
-  border-radius: 8px;
+  padding: 1.875rem;
+  border-radius: 0.5rem;
   text-align: center;
-  box-shadow: 0 5px 15px var(--shadow-color);
+  box-shadow: 0 0.3125rem 0.9375rem var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px var(--shadow-color);
+  transform: translateY(-0.625rem);
+  box-shadow: 0 0.9375rem 1.875rem var(--shadow-color);
 }
 
 .service-card i {
   font-size: 3rem;
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .service-card h3 {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   font-size: 1.5rem;
 }
 
 .services-cta {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /* About Section */
 .about .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 2.5rem;
   align-items: center;
 }
 
 .benefits li {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   display: flex;
   align-items: center;
 }
 
 .benefits i {
   color: var(--success-color);
-  margin-right: 10px;
+  margin-right: 0.625rem;
   font-size: 1.2rem;
 }
 
 .about-image {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px var(--shadow-color);
+  box-shadow: 0 0.625rem 1.875rem var(--shadow-color);
 }
 
 /* Contact Section */
@@ -242,33 +239,33 @@ nav ul li a.active {
 
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.875rem;
 }
 
 .contact-item {
   background-color: var(--bg-light);
-  padding: 30px;
-  border-radius: 8px;
+  padding: 1.875rem;
+  border-radius: 0.5rem;
   text-align: center;
-  box-shadow: 0 5px 15px var(--shadow-color);
+  box-shadow: 0 0.3125rem 0.9375rem var(--shadow-color);
 }
 
 .contact-item i {
   font-size: 2.5rem;
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .contact-item h3 {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 /* Footer */
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 30px 0;
+  padding: 1.875rem 0;
   text-align: center;
 }
 
@@ -280,7 +277,7 @@ footer .container {
 
 .social-links a {
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 0.9375rem;
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -291,27 +288,27 @@ footer .container {
 
 /* Page Header */
 .page-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-    url("assets/515791da-eletricista-001-800x445.jpeg");
+  background-image: linear-gradient(rgba(75, 72, 30, 0.6), rgba(0, 0, 0, 0.7)),
+    url("assets/capa-servicos.jpeg");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
   text-align: center;
-  padding: 80px 0;
+  padding: 5rem 0;
   position: relative;
 }
 
 .page-header h1 {
   font-size: 2.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 /* Services Detailed */
 .service-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 60px;
+  gap: 2.5rem;
+  margin-bottom: 3.75rem;
   align-items: center;
 }
 
@@ -321,17 +318,17 @@ footer .container {
 }
 
 .service-description h2:after {
-  margin: 15px 0;
+  margin: 0.9375rem 0;
 }
 
 .service-description ul {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .service-description li {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   position: relative;
-  padding-left: 25px;
+  padding-left: 1.5625rem;
 }
 
 .service-description li:before {
@@ -344,9 +341,13 @@ footer .container {
 }
 
 .service-image {
-  border-radius: 8px;
+  border-radius: 0.5rem;
+  height: 23em;
   overflow: hidden;
-  box-shadow: 0 10px 30px var(--shadow-color);
+  box-shadow: 0 0.625rem 1.875rem var(--shadow-color);
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
 }
 
 /* CTA Section */
@@ -354,7 +355,7 @@ footer .container {
   background-color: var(--primary-color);
   color: var(--text-light);
   text-align: center;
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 
 .cta h2 {
@@ -367,8 +368,8 @@ footer .container {
 
 .cta p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 700px;
+  margin-bottom: 1.875rem;
+  max-width: 43.75rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -377,8 +378,50 @@ footer .container {
   font-size: 1.1rem;
 }
 
+/* Botão do WhatsApp */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 3.125rem;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem var(--shadow-color);
+  z-index: 999;
+  transition: all 0.3s ease;
+  background-color: var(--whatsapp-color);
+  color: var(--text-light);
+}
+
+/* Estilo do botão fixo */
+.whatsapp-button.fixed {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: none;
+  z-index: 999;
+}
+
+.hero-whatsapp {
+  margin-top: 1.875rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.whatsapp-button i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.whatsapp-button:hover {
+  background-color: var(--whatsapp-dark);
+  transform: scale(1.05);
+  box-shadow: 0 0.375rem 0.75rem var(--shadow-dark);
+}
+
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 62rem) {
   .about .container,
   .service-item {
     grid-template-columns: 1fr;
@@ -391,60 +434,23 @@ footer .container {
   .service-item:nth-child(even) .service-image {
     order: -1;
   }
+
+  .service-image {
+    height: 30em;
+    width: 100%;
+  }
 }
 
-/* Botão do WhatsApp */
-.whatsapp-button {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 12px 20px;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  z-index: 999;
-  transition: all 0.3s ease;
-  background-color: var(--whatsapp-color);
-  color: var(--text-light);
-}
-
-/* Estilo do botão fixo */
-.whatsapp-button.fixed {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  z-index: 999;
-}
-
-.hero-whatsapp {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 5;
-}
-
-.whatsapp-button i {
-  font-size: 1.5rem;
-  margin-right: 8px;
-}
-
-.whatsapp-button:hover {
-  background-color: var(--whatsapp-dark);
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px var(--shadow-dark);
-}
-
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   nav {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 4.375rem;
     left: 0;
     width: 100%;
     background-color: var(--primary-color);
-    padding: 20px;
-    box-shadow: 0 5px 10px var(--shadow-color);
+    padding: 1.25rem;
+    box-shadow: 0 0.3125rem 0.625rem var(--shadow-color);
   }
 
   nav.active {
@@ -457,7 +463,7 @@ footer .container {
 
   nav ul li {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
   }
 
   .menu-toggle {
@@ -465,30 +471,35 @@ footer .container {
   }
 
   .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("assets/jeferson.png");
+    background-image: linear-gradient(rgba(107, 101, 47, 0.7), rgba(0, 0, 0, 0.4)),
+      url("assets/capa-inicio-mobile.jpeg");
     background-position: center top;
   }
 
   .page-header {
-    background-image: linear-gradient(rgba(65, 43, 10, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/serviçoes-mobile.jpeg");
+    background-image: linear-gradient(rgba(65, 43, 10, 0.6), rgba(0, 0, 0, 0.5)),
+    url("assets/capa-servicos-mobile.jpeg");
     background-position: center;
-}
-  
+  }
+
+  .service-image {
+    height: 100%;
+  }
+
   footer .container {
     flex-direction: column;
   }
 
   .social-links {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   .hero h1 {
     font-size: 2.2rem;
   }
-    .whatsapp-button {
-    padding: 10px 16px;
+
+  .whatsapp-button {
+    padding: 0.625rem 1rem;
   }
 
   .whatsapp-button i {
@@ -496,6 +507,6 @@ footer .container {
   }
 
   .hero-whatsapp {
-    margin-top: 40px;
+    margin-top: 2.5rem;
   }
 }
